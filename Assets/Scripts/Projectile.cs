@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using EZCameraShake;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -8,6 +9,8 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Canvas crosshairHUD;
     private Rigidbody2D _rb2d;
     private Crosshairs _cHairs;
+
+    private CameraShaker _cameraShaker;
     // Start is called before the first frame update
     void Start()
     {
