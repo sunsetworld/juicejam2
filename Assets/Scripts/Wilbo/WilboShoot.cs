@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class WilboShoot : MonoBehaviour
 {
+    [SerializeField] private AudioClip shootSound;
+    
     [SerializeField] private bool isPlayer;
     
     [SerializeField] GameObject projectile;
@@ -31,6 +33,7 @@ public class WilboShoot : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                AudioSource.PlayClipAtPoint(shootSound, transform.position);
                 ShootProjectile(gunL);
                 ShootProjectile(gunR);
             }

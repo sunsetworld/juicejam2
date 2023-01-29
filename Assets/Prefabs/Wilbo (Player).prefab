@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 7719240067583703997}
   - component: {fileID: 7719240067583703996}
   - component: {fileID: 358046783370571934}
+  - component: {fileID: 369798270}
   m_Layer: 0
   m_Name: Wilbo (Player)
   m_TagString: Untagged
@@ -245,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  rotationSpeed: 120
+  rotationSpeed: 180
   moveSpeed: 5
   mouseSensitivity: 1
 --- !u!50 &7719240067583703996
@@ -281,8 +282,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58678590e8ae648ef919e9422d61de2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootSound: {fileID: 8300000, guid: 70c88d79e09334c59a2b389bec5ede4a, type: 3}
   isPlayer: 1
   projectile: {fileID: 7362732389699807531, guid: ebf1b79c807ca47c18d84c5d6a124ec3, type: 3}
   gunL: {fileID: 4484168413746456340}
   gunR: {fileID: 2325840257336412507}
   projectileForce: 80
+--- !u!114 &369798270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719240067583703993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84577173ca1f4ca0a58259e19464108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bankBalance: 100000
+  moneyDeduct: 1000
+  cashMachineClip: {fileID: 8300000, guid: 51890b97903cf42b997a8ae57ee7126f, type: 3}

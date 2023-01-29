@@ -7,6 +7,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int health = 100;
 
     [SerializeField] private Canvas crosshairHUD;
+
+    [SerializeField] private AudioClip explosionSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         health -= healthToReduce;
         if (health <= 0)
         {
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             Canvas cHUD = Instantiate(crosshairHUD);
             Destroy(cHUD);
         }

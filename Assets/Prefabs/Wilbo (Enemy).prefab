@@ -219,7 +219,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.09148687}
+  m_Offset: {x: 0, y: 0.10823631}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -230,7 +230,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.024, y: 0.36247945}
+  m_Size: {x: 1.0875483, y: 0.81639564}
   m_EdgeRadius: 0
 --- !u!50 &7719240067583703996
 Rigidbody2D:
@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58678590e8ae648ef919e9422d61de2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootSound: {fileID: 8300000, guid: 7a1e1d45e8baa407ebcdd084d2eb889c, type: 3}
   isPlayer: 0
   projectile: {fileID: 7362732389699807531, guid: ebf1b79c807ca47c18d84c5d6a124ec3, type: 3}
   gunL: {fileID: 4484168413746456340}
@@ -284,3 +285,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   crosshairHUD: {fileID: 6221425759887862891, guid: 55042bd470ab342518ccd8d58b7ac646, type: 3}
+  explosionSound: {fileID: 8300000, guid: 15914c88ac99244ef80c6f97fe99a1f5, type: 3}

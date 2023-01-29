@@ -17,6 +17,8 @@ public class WilboMovement : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 1f;
     private Vector2 _movement;
     private Vector2 _mousePosition;
+
+    private bool _isAlive = true;
     
     // Start is called before the first frame update
     void Start()
@@ -36,8 +38,12 @@ public class WilboMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        RotatePlayer();
-        MovePlayer();
+        if (_isAlive)
+        {
+            RotatePlayer();
+            MovePlayer();
+        }
+
     }
 
     void RotatePlayer()
@@ -64,14 +70,19 @@ public class WilboMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow)|| Input.GetKey(KeyCode.W))
         {
             // _transform.position += _transform.up * moveSpeed * Time.fixedDeltaTime;
-            _rb2d.position = _rb2d.position + (Vector2)(_transform.up * moveSpeed * Time.fixedDeltaTime);
+            _rb2d.position = _rb2d.position + (Vector2)(_transform.up * (moveSpeed * Time.fixedDeltaTime));
         }
         if (Input.GetKey(KeyCode.DownArrow)|| Input.GetKey(KeyCode.S))
         {
-            _rb2d.position = _rb2d.position + (Vector2)(-_transform.up * moveSpeed * Time.fixedDeltaTime);
+            _rb2d.position = _rb2d.position + (Vector2)(-_transform.up * (moveSpeed * Time.fixedDeltaTime));
         }
 
 
+    }
+
+    public void IsDead()
+    {
+        _isAlive = false;
     }
 }
 // Tutorials used: https://answers.unity.com/questions/609527/how-do-i-make-a-game-object-move-in-the-direction.html?childToView=613109#answer-613109

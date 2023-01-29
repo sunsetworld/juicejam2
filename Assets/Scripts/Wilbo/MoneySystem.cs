@@ -27,12 +27,16 @@ public class MoneySystem : MonoBehaviour
         } else if (bankBalance <= 0)
         {
             _isBankrupt = true;
+            WilboMovement wb = FindObjectOfType<WilboMovement>();
+            wb.IsDead();
+            StartCoroutine(EndGame());
         }
     }
 
     public void AddMoney(float moneyToAdd)
     {
         bankBalance += moneyToAdd * Time.deltaTime;
+        AudioSource.PlayClipAtPoint(cashMachineClip, transform.position);
         print(bankBalance);
     }
     
@@ -40,5 +44,16 @@ public class MoneySystem : MonoBehaviour
     {
         bankBalance += moneyToDeduct * Time.deltaTime;
         print(bankBalance);
+    }
+
+    public float GetMoney()
+    {
+        return bankBalance;
+    }
+
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(3);
+        
     }
 }
