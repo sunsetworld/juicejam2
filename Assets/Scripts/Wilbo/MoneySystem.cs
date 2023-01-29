@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 public class MoneySystem : MonoBehaviour
 {
     [FormerlySerializedAs("bank_balance")] [SerializeField] private float bankBalance = 100000.00f;
+
     [FormerlySerializedAs("money_deduct")] [SerializeField] private float moneyDeduct = 100f;
 
     [FormerlySerializedAs("CashMachineClip")] [SerializeField] private AudioClip cashMachineClip; 
@@ -14,7 +15,6 @@ public class MoneySystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -50,6 +50,8 @@ public class MoneySystem : MonoBehaviour
     {
         return bankBalance;
     }
+    
+
 
     IEnumerator EndGame()
     {

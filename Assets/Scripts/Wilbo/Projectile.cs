@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Canvas crosshairHUD;
     private Rigidbody2D _rb2d;
     private Crosshairs _cHairs;
+    private MoneySystem _mS;
 
     private CameraShaker _cameraShaker;
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class Projectile : MonoBehaviour
         _rb2d = GetComponent<Rigidbody2D>();
         crosshairHUD.enabled = false;
         _cHairs = FindObjectOfType<Crosshairs>();
+        _mS = FindObjectOfType<MoneySystem>();
     }
 
     // Update is called once per frame
