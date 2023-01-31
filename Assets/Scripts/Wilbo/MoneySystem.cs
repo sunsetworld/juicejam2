@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class MoneySystem : MonoBehaviour
@@ -23,7 +24,7 @@ public class MoneySystem : MonoBehaviour
         if (bankBalance > 0)
         {
             bankBalance -= moneyDeduct * Time.deltaTime;
-            print(bankBalance);
+            // print(bankBalance);
         } else if (bankBalance <= 0)
         {
             _isBankrupt = true;
@@ -37,13 +38,13 @@ public class MoneySystem : MonoBehaviour
     {
         bankBalance += moneyToAdd * Time.deltaTime;
         AudioSource.PlayClipAtPoint(cashMachineClip, transform.position);
-        print(bankBalance);
+        // print(bankBalance);
     }
     
     public void DeductMoney(float moneyToDeduct)
     {
         bankBalance += moneyToDeduct * Time.deltaTime;
-        print(bankBalance);
+        // print(bankBalance);
     }
 
     public float GetMoney()
@@ -56,6 +57,12 @@ public class MoneySystem : MonoBehaviour
     IEnumerator EndGame()
     {
         yield return new WaitForSeconds(3);
-        
+        SceneManager.LoadScene("MainMenu");
+
+    }
+
+    public bool IsBankrupt()
+    {
+        return _isBankrupt;
     }
 }

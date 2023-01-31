@@ -35,6 +35,7 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         } else if (col.gameObject.CompareTag("Enemy"))
         {
+            // CinemachineShake.Instance.ShakeCam(2.5f, 0.4f);
             Destroy(col.gameObject);
             _cHairs.EnemyKilled();
         }

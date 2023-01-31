@@ -19,11 +19,13 @@ public class WilboShoot : MonoBehaviour
     private bool _gunUsed;
 
     [SerializeField] private float projectileForce = 20f;
+
+    private MoneySystem _moneySystem;
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        _moneySystem = FindObjectOfType<MoneySystem>();
+
     }
 
     // Update is called once per frame
@@ -33,9 +35,12 @@ public class WilboShoot : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                AudioSource.PlayClipAtPoint(shootSound, transform.position);
-                ShootProjectile(gunL);
-                ShootProjectile(gunR);
+                if (!_moneySystem.IsBankrupt())
+                {
+                    AudioSource.PlayClipAtPoint(shootSound, transform.position);
+                    ShootProjectile(gunL);
+                    ShootProjectile(gunR);
+                }
             }
         }
     }
