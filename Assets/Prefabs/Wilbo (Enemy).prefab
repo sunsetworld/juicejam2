@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 7719240067583703996}
   - component: {fileID: 358046783370571934}
   - component: {fileID: 5631080923219186365}
+  - component: {fileID: 3599875683067889173}
   m_Layer: 0
   m_Name: Wilbo (Enemy)
   m_TagString: Enemy
@@ -223,7 +224,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 1.024, y: 1.024}
     newSize: {x: 10.24, y: 10.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -286,3 +287,15 @@ MonoBehaviour:
   health: 100
   crosshairHUD: {fileID: 6221425759887862891, guid: 55042bd470ab342518ccd8d58b7ac646, type: 3}
   explosionSound: {fileID: 8300000, guid: 15914c88ac99244ef80c6f97fe99a1f5, type: 3}
+--- !u!114 &3599875683067889173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719240067583703993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da7d295e48a743739eaffd483fc0dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

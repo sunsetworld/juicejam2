@@ -1372,7 +1372,6 @@ GameObject:
   m_Component:
   - component: {fileID: 607027156}
   - component: {fileID: 607027155}
-  - component: {fileID: 607027157}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -1434,19 +1433,6 @@ Transform:
   m_Father: {fileID: 630378045}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &607027157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607027154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ee819468e87452bbb05247c0325dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camTransform: {fileID: 630378045}
 --- !u!1 &607459985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1514,7 @@ GameObject:
   - component: {fileID: 630378043}
   - component: {fileID: 630378042}
   - component: {fileID: 630378046}
+  - component: {fileID: 630378047}
   m_Layer: 0
   m_Name: MainCam
   m_TagString: Untagged
@@ -1669,6 +1656,22 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &630378047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630378041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 0, z: 0}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &687306225
 PrefabInstance:
   m_ObjectHideFlags: 0
