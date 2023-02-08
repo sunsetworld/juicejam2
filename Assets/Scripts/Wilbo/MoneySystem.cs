@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,7 +44,7 @@ public class MoneySystem : MonoBehaviour
     
     public void DeductMoney(float moneyToDeduct)
     {
-        bankBalance += moneyToDeduct * Time.deltaTime;
+        bankBalance -= moneyToDeduct * Time.deltaTime;
         // print(bankBalance);
     }
 
@@ -64,5 +65,15 @@ public class MoneySystem : MonoBehaviour
     public bool IsBankrupt()
     {
         return _isBankrupt;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(col.gameObject);
+            float moneyToDeduct = bankBalance * 0.8f;
+            DeductMoney(moneyToDeduct);
+        }
     }
 }

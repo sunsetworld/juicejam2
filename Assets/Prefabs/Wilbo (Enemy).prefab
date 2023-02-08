@@ -128,9 +128,9 @@ GameObject:
   - component: {fileID: 7719240067583703999}
   - component: {fileID: 7719240067583703992}
   - component: {fileID: 7719240067583703996}
-  - component: {fileID: 358046783370571934}
   - component: {fileID: 5631080923219186365}
   - component: {fileID: 3599875683067889173}
+  - component: {fileID: 5685211271855921021}
   m_Layer: 0
   m_Name: Wilbo (Enemy)
   m_TagString: Enemy
@@ -254,24 +254,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &358046783370571934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7719240067583703993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58678590e8ae648ef919e9422d61de2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootSound: {fileID: 8300000, guid: 7a1e1d45e8baa407ebcdd084d2eb889c, type: 3}
-  isPlayer: 0
-  projectile: {fileID: 7362732389699807531, guid: ebf1b79c807ca47c18d84c5d6a124ec3, type: 3}
-  gunL: {fileID: 4484168413746456340}
-  gunR: {fileID: 2325840257336412507}
-  projectileForce: 80
 --- !u!114 &5631080923219186365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,3 +281,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da7d295e48a743739eaffd483fc0dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 10
+  movementSpeed: 2
+  wilboObj: {fileID: 7719240067583703993, guid: a2bf38ddcc4634636a7fd01338129ce7, type: 3}
+  wilboTransform: {fileID: 7719240067583703998, guid: a2bf38ddcc4634636a7fd01338129ce7, type: 3}
+  rotationModifier: 90
+--- !u!114 &5685211271855921021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719240067583703993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f6162bd027747cd958c6c0619e8cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSound: {fileID: 8300000, guid: 51890b97903cf42b997a8ae57ee7126f, type: 3}
+  projectile: {fileID: 0}
+  projectileForce: 20
