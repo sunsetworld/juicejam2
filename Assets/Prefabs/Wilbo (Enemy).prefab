@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2325840257336412507}
   - component: {fileID: 2590450228667677371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4484168413746456340}
   - component: {fileID: 7806939077128481248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 5631080923219186365}
   - component: {fileID: 3599875683067889173}
   - component: {fileID: 5685211271855921021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wilbo (Enemy)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -167140537
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e30b35ae4eba94115b332c8d45985a29, type: 3}
@@ -299,5 +299,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootSound: {fileID: 8300000, guid: 51890b97903cf42b997a8ae57ee7126f, type: 3}
-  projectile: {fileID: 0}
+  projectile: {fileID: 7362732389699807531, guid: a72c776bb74e745ffadca94b12a25141, type: 3}
   projectileForce: 20
+  gunL: {fileID: 4484168413746456340}
+  gunR: {fileID: 2325840257336412507}
+  minTime: 2
+  maxTime: 10

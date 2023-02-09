@@ -193,7 +193,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -167140537
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57bec8958fdfe47f4afb8b674f8bdb22, type: 3}
@@ -287,7 +287,7 @@ MonoBehaviour:
   projectile: {fileID: 7362732389699807531, guid: ebf1b79c807ca47c18d84c5d6a124ec3, type: 3}
   gunL: {fileID: 4484168413746456340}
   gunR: {fileID: 2325840257336412507}
-  projectileForce: 80
+  projectileForce: 100
 --- !u!114 &369798270
 MonoBehaviour:
   m_ObjectHideFlags: 0
